@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>صفحه 2 — پروفایل کاربری</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="page-title">صفحه 2 — پروفایل کاربری</header>
+
+<div class="container">
+  <!-- باکس پروفایل -->
+  <div class="profile-container">
+    <div class="profile-left">
+      <img id="profileImage" src="https://via.placeholder.com/75?text=User" alt="profile">
+      <input type="file" id="uploadProfile" accept="image/*" hidden>
+    </div>
+    <div class="profile-center">
+      <span id="profileFullName" class="profile-name">نام شما</span>
+      <span id="profileScore" class="profile-score">امتیاز: 0</span>
+    </div>
+    <div class="profile-right">
+      <button id="viewSavedBtn" class="mini-btn">📁 ذخیره‌شده‌ها</button>
+    </div>
+  </div>
+
+  <!-- توضیح کوتاه درباره مجموعه‌ها -->
+  <div class="set-info">
+    <p>برخی مجموعه‌ها در ریاضی به‌عنوان مجموعه‌های شناخته‌شده نام‌گذاری شده‌اند و معمولاً بی‌نهایت عضو دارند و با علامت‌های ویژه نمایش داده می‌شوند.</p>
+  </div>
+
+  <!-- فرم ثبت نام -->
+  <h2 class="section-title">ثبت اطلاعات کاربری</h2>
+  <label for="firstName">نام:</label>
+  <input id="firstName" type="text" placeholder="نام خود را وارد کنید">
+  <label for="lastName">نام خانوادگی:</label>
+  <input id="lastName" type="text" placeholder="نام خانوادگی خود را وارد کنید">
+  <button onclick="saveProfileAndProceed()">ذخیره و ادامه</button>
+</div>
+
+<!-- modal ذخیره‌شده‌ها -->
+<div id="savedModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>اطلاعات ذخیره شده</h3>
+    <p><strong>نام:</strong> <span id="savedName"></span></p>
+    <p><strong>نام خانوادگی:</strong> <span id="savedLast"></span></p>
+    <p><strong>امتیاز کل:</strong> <span id="savedScore"></span></p>
+    <button id="closeModal" class="close-btn">بستن</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

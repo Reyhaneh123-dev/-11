@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>صفحه 4 — عملیات و نمونه سوال‌ها</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="page-title">صفحه 4 — عملیات و نمونه سوال‌ها</header>
+
+<div class="container">
+  <h2>انجام عملیات ریاضی روی مجموعه‌ها</h2>
+
+  <label>نمایش</label>
+  <select id="displayType" onchange="handleDisplayChange()">
+    <option value="math">نماد ریاضی</option>
+    <option value="list">نوشتن اعضا</option>
+    <option value="knownSet">مجموعه‌های شناخته شده</option>
+  </select>
+
+  <select id="knownSetSelect" class="hidden">
+    <option value="">انتخاب مجموعه شناخته شده...</option>
+    <option value="N">N — اعداد طبیعی</option>
+    <option value="W">W — اعداد حسابی</option>
+    <option value="Z">Z — اعداد صحیح</option>
+    <option value="Q">Q — اعداد گویا</option>
+    <option value="I">I — اعداد گنگ</option>
+    <option value="R">R — اعداد حقیقی</option>
+  </select>
+
+  <div class="result-box" id="memberBox"></div>
+
+  <label>عملیات روی مجموعه‌ها:</label>
+  <select id="operationSelect">
+    <option value="union">اجتماع (∪)</option>
+    <option value="intersection">اشتراک (∩)</option>
+    <option value="difference">تفاضل (_)</option>
+    <option value="subset">زیرمجموعه بودن (⊆)</option>
+  </select>
+
+  <button onclick="showOperations()">نمایش محاسبه</button>
+
+  <hr>
+
+  <h2>نمونه سوال‌ها</h2>
+  <div id="quizBox" class="quiz-box"></div>
+
+  <div class="quiz-controls">
+    <button id="saveQuestionBtn" class="mini-btn" onclick="saveCurrentQuestion()">ذخیره سوال</button>
+    <button id="nextQuestionBtn" class="mini-btn" onclick="nextQuestion()">سوال بعدی</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

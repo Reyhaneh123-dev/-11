@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>صفحه 3 — تعریف مجموعه‌ها</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="page-title">صفحه 3 — تعریف مجموعه‌ها</header>
+
+<div class="container">
+  <!-- پروفایل -->
+  <div class="profile-container">
+    <div class="profile-left">
+      <img id="profileImage" src="https://via.placeholder.com/75?text=User" alt="profile">
+      <input type="file" id="uploadProfile" accept="image/*" hidden>
+    </div>
+    <div class="profile-center">
+      <span id="profileFullName" class="profile-name">نام شما</span>
+      <span id="profileScore" class="profile-score">امتیاز: 0</span>
+    </div>
+    <div class="profile-right">
+      <button id="viewSavedBtn" class="mini-btn">📁 ذخیره‌شده‌ها</button>
+    </div>
+  </div>
+
+  <!-- توضیح مختصر -->
+  <div class="set-info">
+    <p>برخی مجموعه‌ها در ریاضی به‌عنوان مجموعه‌های شناخته‌شده نام‌گذاری شده‌اند و معمولاً بی‌نهایت عضو دارند و با علامت‌های ویژه نمایش داده می‌شوند.</p>
+  </div>
+
+  <!-- فرم تعریف -->
+  <label>عضو کدام مجموعه شناخته شده است؟</label>
+  <select id="knownSet">
+    <option value="">انتخاب کنید...</option>
+    <option value="N">N — اعداد طبیعی</option>
+    <option value="W">W — اعداد حسابی</option>
+    <option value="Z">Z — اعداد صحیح</option>
+    <option value="Q">Q — اعداد گویا</option>
+    <option value="I">I — اعداد گنگ</option>
+    <option value="R">R — اعداد حقیقی</option>
+  </select>
+
+  <label>شرط را به صورت کلامی بنویسید:</label>
+  <input id="textCondition" type="text" placeholder="مثلاً بزرگتر مساوی 3 و کوچکتر از 8">
+
+  <button onclick="showMath()">نمایش نماد ریاضی</button>
+  <div id="mathResult" class="result-box"></div>
+
+  <button onclick="showMembers()">نمایش اعضای مجموعه</button>
+  <div id="membersBox" class="result-box"></div>
+
+  <button onclick="showVenn()">نمایش نمودار ون</button>
+  <canvas id="vennCanvas" width="600" height="220"></canvas>
+
+  <button onclick="showAxis()">نمایش محور</button>
+  <canvas id="axisCanvas" width="700" height="160"></canvas>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
